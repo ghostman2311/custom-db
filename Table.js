@@ -3,10 +3,11 @@ const fs = require("fs");
 const TableDoesNotExistError = require("./errors/TableDoesNotExistError");
 
 module.exports = class Table {
-  constructor({ tableName }) {
+  constructor(tableName) {
     this.tableName = tableName;
   }
   get filePath() {
+    console.log("tablename",this.tableName)
     return `data/${this.tableName}.json`;
   }
 
